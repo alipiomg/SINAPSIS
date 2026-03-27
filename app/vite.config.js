@@ -42,5 +42,5 @@ function courseDataPlugin() {
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), courseDataPlugin()],
-  server: { port: 3000 }
+  server: { port: parseInt(process.env.PORT || '3000') }
 })
