@@ -3,5 +3,8 @@
   "buildCommand": "npm run build --prefix app",
   "outputDirectory": "app/dist",
   "installCommand": "npm install --prefix app",
-  "framework": "vite"
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/((?!assets|concepts|course\\.json|gamification\\.json|favicon\\.svg|icons\\.svg).*)", "destination": "/index.html" }
+  ]
 }

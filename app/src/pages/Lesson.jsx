@@ -17,7 +17,7 @@ export default function Lesson({ course, progress, completeLesson, gamification 
   useEffect(() => {
     setLoading(true)
     setShowReto(false)
-    fetch(`/api/concept/${id}`)
+    fetch(`/concepts/${id}.json`)
       .then(r => r.json())
       .then(data => { setConcept(data); setLoading(false) })
       .catch(() => setLoading(false))

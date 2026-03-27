@@ -1,0 +1,33 @@
+{
+  "id": "export-import-backup",
+  "numero": 8,
+  "titulo": "Cerebro de los X-Men: Export e Import",
+  "zona": "laboratorio-sinaptico",
+  "tipo": "practica",
+  "xp": 30,
+  "secciones": {
+    "explicacion": "Tienes dos comandos para mover tus instincts dentro y fuera del sistema:\n\n/instinct-export guarda todos tus instincts en un archivo (YAML o JSON) para respaldo o compartir. Puedes exportar todos los instincts o filtrar por scope. El archivo resultante contiene cada instinct con su nombre, confidence, dominio, scope y reglas.\n\nOpciones principales:\n  /instinct-export --format yaml --output mis-instincts.yaml\n  /instinct-export --format json --output mis-instincts.json\n  /instinct-export --scope global --output solo-globales.yaml\n\n/instinct-import carga instincts desde un archivo a tu sistema. Puedes importar al scope actual (project) o forzar un scope especifico.\n\nOpciones principales:\n  /instinct-import --source archivo.yaml\n  /instinct-import --source archivo.yaml --scope project\n\nCasos de uso reales:\n1. Backup antes de cambios grandes: exporta todo antes de experimentar. Si algo sale mal, importas tu backup y vuelves al estado anterior.\n2. Compartir con un companero: exportas tus instincts de un dominio, se los envias, y el los importa. Ahora tiene toda tu experiencia en ese tema.\n3. Migrar a una maquina nueva: exportas en tu maquina actual, copias el archivo, importas en la nueva. Cero perdida de conocimiento.\n4. Importar de la comunidad: descarga packs de instincts creados por otros usuarios y adaptados a frameworks o herramientas especificas.\n\nEl formato YAML es legible por humanos, asi que puedes abrir el archivo, leerlo, editarlo manualmente si quieres, y luego importarlo de nuevo.",
+    "metafora": "Cerebro es la maquina de los X-Men que almacena informacion sobre todos los mutantes del mundo. El Profesor Xavier se conecta y puede localizar, analizar y entender a cada mutante del planeta. /instinct-export es como guardar una copia completa de Cerebro en un disco. Toda la informacion, todos los conocimientos, empaquetados y listos para transportar. /instinct-import es como conectarse a Cerebro y cargar todos esos conocimientos en tu mente. Puedes compartir tu Cerebro con otros heroes: envias el archivo y ellos obtienen toda tu experiencia acumulada en segundos.",
+    "ejemplo": "Exportar todos tus instincts:\n  /instinct-export --format yaml --output mis-instincts.yaml\n  Exported 12 instincts to mis-instincts.yaml\n\nExportar solo instincts globales:\n  /instinct-export --scope global --output globales.yaml\n  Exported 4 instincts to globales.yaml\n\nImportar instincts de un companero:\n  /instinct-import --source instincts-companero.yaml --scope project\n  Imported 8 instincts to project scope\n\nAsí se ve un archivo exportado en YAML:\n\n  instincts:\n    - name: commits-en-espanol\n      confidence: 0.92\n      domain: git\n      scope: global\n      rule: \"Escribir todos los mensajes de commit en espanol\"\n    - name: usar-tailwind\n      confidence: 0.85\n      domain: frontend\n      scope: project\n      rule: \"Usar Tailwind CSS para estilos, no CSS vanilla\"\n    - name: tests-con-vitest\n      confidence: 0.78\n      domain: testing\n      scope: project\n      rule: \"Usar Vitest como framework de testing, no Jest\"\n\nComo ves, el archivo es completamente legible. Puedes abrirlo con cualquier editor de texto, modificar una regla, cambiar un confidence, o eliminar un instinct antes de importarlo.",
+    "mini_reto": "Exporta tus instincts actuales con /instinct-export --format yaml --output backup-instincts.yaml. Abre el fichero con tu editor de texto y leelo: fijate en los nombres, confidence y reglas de cada instinct. Guarda ese archivo en un lugar seguro como backup. Si trabajas en equipo, envia el fichero a un companero para que pueda importar tus conocimientos con /instinct-import --source backup-instincts.yaml. Si un companero te envia los suyos, importalos y observa con /instinct-status como se integran con los tuyos.",
+    "glosario": [
+      {
+        "termino": "/instinct-export",
+        "definicion": "Comando que exporta todos los instincts (o un subconjunto filtrado por scope) a un archivo en formato YAML o JSON para backup o compartir."
+      },
+      {
+        "termino": "/instinct-import",
+        "definicion": "Comando que importa instincts desde un archivo YAML o JSON al sistema. Permite especificar el scope de destino."
+      },
+      {
+        "termino": "Backup",
+        "definicion": "Copia de seguridad de tus instincts. Exportar regularmente te protege contra perdida de conocimiento acumulado."
+      },
+      {
+        "termino": "Formato YAML",
+        "definicion": "Formato de texto estructurado legible por humanos. Usa indentacion para definir jerarquia. Es el formato recomendado para exportar instincts porque puedes leerlo y editarlo facilmente."
+      }
+    ],
+    "resumen_visual": "CEREBRO DE LOS X-MEN - SISTEMA DE TRANSFERENCIA DE CONOCIMIENTO\n\n[Export] /instinct-export --> Guarda tus instincts en un archivo\n[Import] /instinct-import --> Carga instincts desde un archivo\n\n[4 Casos de uso]\n  1. Backup         --> Seguridad antes de experimentar\n  2. Compartir       --> Transfiere experiencia a companeros\n  3. Migrar          --> Maquina nueva, mismo conocimiento\n  4. Comunidad       --> Importa packs de otros heroes\n\n[Formatos]\n  YAML --> Legible por humanos, editable\n  JSON --> Compatible con herramientas\n\nRecuerda: El Profesor Xavier nunca trabaja sin Cerebro. Tu tampoco deberias trabajar sin un backup de tus instincts."
+  }
+}

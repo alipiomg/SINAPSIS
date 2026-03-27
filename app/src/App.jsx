@@ -15,8 +15,8 @@ function App() {
   })
 
   useEffect(() => {
-    fetch('/api/course').then(r => r.json()).then(setCourse)
-    fetch('/api/gamification').then(r => r.json()).then(setGamification)
+    fetch('/course.json').then(r => r.json()).then(setCourse)
+    fetch('/gamification.json').then(r => r.json()).then(setGamification)
   }, [])
 
   useEffect(() => {

@@ -1,0 +1,279 @@
+{
+  "id": "sinapsis-v1",
+  "version": "1.0.0",
+  "title": "Sinapsis: De Cero a Maestro",
+  "subtitle": "Despierta tus superpoderes con el sistema de aprendizaje continuo para Claude Code",
+  "dominio": "sinapsis",
+  "descripcion_corta": "Curso completo para dominar Sinapsis desde cero. Aprende a convertir Claude Code en tu aprendiz personal que nunca olvida, detecta patrones y evoluciona contigo.",
+  "duracion_estimada_horas": 10,
+  "nivel_dificultad": "principiante",
+  "tema_visual": "superheroes",
+  "narrativa": {
+    "concepto_central": "Sinapsis es el origen de tus superpoderes. Cada instinct es un superpoder. Cada skill es un traje de superheroe. Cada agent es un superheroe autonomo.",
+    "cita_principal": "Un gran poder conlleva una gran responsabilidad",
+    "landing_secciones": [
+      {
+        "tema": "superheroes",
+        "titulo": "Todo superheroe tiene un origen. Este es el tuyo.",
+        "descripcion": "Sinapsis transforma a Claude Code de asistente generico a tu aprendiz personal con superpoderes.",
+        "cta": "Despierta tus Superpoderes"
+      },
+      {
+        "tema": "matrix",
+        "titulo": "Carga habilidades como Neo carga kung fu",
+        "descripcion": "Las skills de Sinapsis se inyectan en Claude Code. Ya no necesitas aprenderlo todo de cero. Cada skill es un programa. Cada instinct, una habilidad desbloqueada.",
+        "visual": "Codigo cayendo estilo Matrix con nombres de instincts en copper"
+      },
+      {
+        "tema": "marvel",
+        "titulo": "Tu equipo de superheroes personales",
+        "descripcion": "Content Factory genera 30 piezas de contenido. Formador Completo crea modulos en 3 horas. Anti-Dispersion bloquea distracciones. Cada agent con sus skills y plugins.",
+        "cita": "Un gran poder conlleva una gran responsabilidad — Spider-Man"
+      }
+    ]
+  },
+  "objetivos_pedagogicos": [
+    "Entender que es Sinapsis y como transforma Claude Code en un aprendiz con memoria",
+    "Dominar el pipeline de 4 fases: Observacion, Deteccion, Instincts, Evolucion",
+    "Ejecutar los comandos principales: /instinct-status, /evolve, /promote, /gotcha, /export, /import",
+    "Aplicar Sinapsis a casos de uso reales: webs, contenido, facturas, formacion",
+    "Compartir y colaborar con otros usuarios mediante forks e instincts compartidos"
+  ],
+  "zonas": [
+    {
+      "id": "plaza-sinapsis",
+      "nombre": "Plaza de la Sinapsis",
+      "descripcion": "Fundamentos: que es Sinapsis, como funciona, tu primer contacto",
+      "nivel_requerido": 1,
+      "tema_hero": "Origen del superheroe"
+    },
+    {
+      "id": "laboratorio-sinaptico",
+      "nombre": "Laboratorio Sinaptico",
+      "descripcion": "Domina los comandos y herramientas de Sinapsis",
+      "nivel_requerido": 2,
+      "tema_hero": "Entrenamiento en la Escuela Xavier"
+    },
+    {
+      "id": "taller-casos-uso",
+      "nombre": "Taller de Casos de Uso",
+      "descripcion": "Aplica Sinapsis a problemas reales: webs, contenido, facturas, formacion",
+      "nivel_requerido": 3,
+      "tema_hero": "Misiones del superheroe"
+    },
+    {
+      "id": "foro-comunidad",
+      "nombre": "Foro y Comunidad",
+      "descripcion": "Comparte superpoderes, haz forks, colabora con otros heroes",
+      "nivel_requerido": 4,
+      "tema_hero": "La Liga de la Justicia"
+    }
+  ],
+  "nodos": [
+    {
+      "id": "que-es-sinapsis",
+      "numero": 1,
+      "titulo": "El Origen del Superheroe",
+      "descripcion_corta": "Que es Sinapsis y por que transforma a Claude Code en un supersoldado",
+      "tipo": "teoria",
+      "prerequisitos": [],
+      "conecta_a": ["pipeline-4-fases"],
+      "xp": 25,
+      "confidence_pedagogica": 0.95,
+      "zona": "plaza-sinapsis"
+    },
+    {
+      "id": "pipeline-4-fases",
+      "numero": 2,
+      "titulo": "La Escuela Xavier: 4 Fases de Entrenamiento",
+      "descripcion_corta": "Las 4 fases del pipeline: Observar, Detectar, Instincts, Evolucionar",
+      "tipo": "teoria",
+      "prerequisitos": ["que-es-sinapsis"],
+      "conecta_a": ["instincts-corazon"],
+      "xp": 30,
+      "confidence_pedagogica": 0.95,
+      "zona": "plaza-sinapsis"
+    },
+    {
+      "id": "instincts-corazon",
+      "numero": 3,
+      "titulo": "Tus Primeros Superpoderes: Instincts",
+      "descripcion_corta": "Que es un instinct, los 6 campos YAML, confidence y scopes",
+      "tipo": "teoria",
+      "prerequisitos": ["pipeline-4-fases"],
+      "conecta_a": ["primer-contacto"],
+      "xp": 30,
+      "confidence_pedagogica": 0.95,
+      "zona": "plaza-sinapsis"
+    },
+    {
+      "id": "primer-contacto",
+      "numero": 4,
+      "titulo": "Ceremonia de Origen: Tu Primer Poder",
+      "descripcion_corta": "Instala Sinapsis y ejecuta /instinct-status por primera vez",
+      "tipo": "practica",
+      "prerequisitos": ["instincts-corazon"],
+      "conecta_a": ["comandos-basicos"],
+      "xp": 40,
+      "confidence_pedagogica": 0.90,
+      "zona": "plaza-sinapsis"
+    },
+    {
+      "id": "comandos-basicos",
+      "numero": 5,
+      "titulo": "El Cinturon de Batman: Comandos Basicos",
+      "descripcion_corta": "/instinct-status, /projects, /promote — tu kit de utilidades",
+      "tipo": "practica",
+      "prerequisitos": ["primer-contacto"],
+      "conecta_a": ["evolve-superpoderes"],
+      "xp": 35,
+      "confidence_pedagogica": 0.90,
+      "zona": "laboratorio-sinaptico"
+    },
+    {
+      "id": "evolve-superpoderes",
+      "numero": 6,
+      "titulo": "La Armadura de Iron Man: /evolve",
+      "descripcion_corta": "Fusiona 5 poderes en un traje completo: skills, commands, agents",
+      "tipo": "practica",
+      "prerequisitos": ["comandos-basicos"],
+      "conecta_a": ["gotchas-errores"],
+      "xp": 40,
+      "confidence_pedagogica": 0.90,
+      "zona": "laboratorio-sinaptico"
+    },
+    {
+      "id": "gotchas-errores",
+      "numero": 7,
+      "titulo": "Spider-Sense: Detecta Peligros con /gotcha",
+      "descripcion_corta": "Captura errores y sus soluciones para que nunca se repitan",
+      "tipo": "practica",
+      "prerequisitos": ["evolve-superpoderes"],
+      "conecta_a": ["export-import-backup"],
+      "xp": 35,
+      "confidence_pedagogica": 0.88,
+      "zona": "laboratorio-sinaptico"
+    },
+    {
+      "id": "export-import-backup",
+      "numero": 8,
+      "titulo": "Cerebro de los X-Men: Export e Import",
+      "descripcion_corta": "Exporta poderes, compartilos, importalos en otra base",
+      "tipo": "practica",
+      "prerequisitos": ["gotchas-errores"],
+      "conecta_a": ["caso-uso-webs"],
+      "xp": 30,
+      "confidence_pedagogica": 0.88,
+      "zona": "laboratorio-sinaptico"
+    },
+    {
+      "id": "caso-uso-webs",
+      "numero": 9,
+      "titulo": "Mision 1: Tu Traje a Medida para Webs",
+      "descripcion_corta": "Sinapsis aprende tu stack y te da poderes especificos para desarrollo web",
+      "tipo": "practica",
+      "prerequisitos": ["export-import-backup"],
+      "conecta_a": ["caso-uso-contenido"],
+      "xp": 45,
+      "confidence_pedagogica": 0.85,
+      "zona": "taller-casos-uso"
+    },
+    {
+      "id": "caso-uso-contenido",
+      "numero": 10,
+      "titulo": "Mision 2: La Fabrica de Iron Man (Content Factory)",
+      "descripcion_corta": "1 grabacion = 30 piezas de contenido en 7 plataformas",
+      "tipo": "practica",
+      "prerequisitos": ["caso-uso-webs"],
+      "conecta_a": ["caso-uso-facturas"],
+      "xp": 45,
+      "confidence_pedagogica": 0.85,
+      "zona": "taller-casos-uso"
+    },
+    {
+      "id": "caso-uso-facturas",
+      "numero": 11,
+      "titulo": "Mision 3: Tu Ataque Especial (Commands Personalizados)",
+      "descripcion_corta": "Crea commands para generar facturas, propuestas o cualquier tarea repetitiva",
+      "tipo": "practica",
+      "prerequisitos": ["caso-uso-contenido"],
+      "conecta_a": ["caso-uso-formacion"],
+      "xp": 45,
+      "confidence_pedagogica": 0.85,
+      "zona": "taller-casos-uso"
+    },
+    {
+      "id": "caso-uso-formacion",
+      "numero": 12,
+      "titulo": "Mision 4: Tu Propio J.A.R.V.I.S. (Agents)",
+      "descripcion_corta": "Agents autonomos que generan modulos formativos completos en 3 horas",
+      "tipo": "practica",
+      "prerequisitos": ["caso-uso-facturas"],
+      "conecta_a": ["foro-compartir"],
+      "xp": 45,
+      "confidence_pedagogica": 0.85,
+      "zona": "taller-casos-uso"
+    },
+    {
+      "id": "foro-compartir",
+      "numero": 13,
+      "titulo": "La Liga de la Justicia: Comparte tus Poderes",
+      "descripcion_corta": "Foro, forks de Sinapsis, instincts compartidos, colaboracion",
+      "tipo": "teoria",
+      "prerequisitos": ["caso-uso-formacion"],
+      "conecta_a": ["tu-propio-sinapsis"],
+      "xp": 30,
+      "confidence_pedagogica": 0.82,
+      "zona": "foro-comunidad"
+    },
+    {
+      "id": "tu-propio-sinapsis",
+      "numero": 14,
+      "titulo": "Un Gran Poder Conlleva una Gran Responsabilidad",
+      "descripcion_corta": "Reto final: configura, usa 1 semana, promueve, comparte. Badge: Spider-Sense",
+      "tipo": "reto",
+      "prerequisitos": ["foro-compartir"],
+      "conecta_a": [],
+      "xp": 60,
+      "confidence_pedagogica": 0.80,
+      "zona": "foro-comunidad"
+    }
+  ],
+  "rutas_pedagogicas": [
+    {
+      "nombre": "Ruta del Heroe (Lineal)",
+      "descripcion": "Sigue el camino del heroe: origen, entrenamiento, misiones, comunidad",
+      "nodos_orden": [
+        "que-es-sinapsis", "pipeline-4-fases", "instincts-corazon", "primer-contacto",
+        "comandos-basicos", "evolve-superpoderes", "gotchas-errores", "export-import-backup",
+        "caso-uso-webs", "caso-uso-contenido", "caso-uso-facturas", "caso-uso-formacion",
+        "foro-compartir", "tu-propio-sinapsis"
+      ],
+      "recomendada": true
+    },
+    {
+      "nombre": "Ruta Exploratoria",
+      "descripcion": "Explora libremente las zonas desbloqueadas. Ideal para repasar o profundizar.",
+      "nodos_orden": [],
+      "recomendada": false
+    }
+  ],
+  "metadata": {
+    "autor": "SalgadoIA",
+    "fecha_creacion": "2026-03-25",
+    "fecha_actualizacion": "2026-03-25",
+    "tags": ["sinapsis", "claude-code", "aprendizaje-continuo", "superheroes", "gamificado"],
+    "curso_origen": null,
+    "instincts_aplicados": [
+      "microleccion-6-secciones-obligatorias",
+      "mapa-max-15-nodos",
+      "reto-ejecutable-verificable",
+      "metafora-experiencia-cotidiana",
+      "ejemplo-codigo-real-nunca-pseudo"
+    ],
+    "fuentes": [
+      "https://media.base44.com/files/public/user_692b3beecc7e9347fbea7fdb/fc596d279_Manual-Sinapsis-Insti-SalgadoIA.pdf",
+      "https://github.com/Luispitik/sinapsis"
+    ]
+  }
+}

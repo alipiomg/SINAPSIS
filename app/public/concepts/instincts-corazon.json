@@ -1,0 +1,45 @@
+{
+  "id": "instincts-corazon",
+  "numero": 3,
+  "titulo": "Tus Primeros Superpoderes: Instincts",
+  "zona": "plaza-sinapsis",
+  "tipo": "teoria",
+  "xp": 30,
+  "secciones": {
+    "explicacion": "Los instincts son la unidad atomica de aprendizaje en Sinapsis. Si el sistema fuera un cuerpo, los instincts serian las neuronas: pequenas, especificas y fundamentales. Cada instinct representa una sola regla aprendida, almacenada en un archivo YAML independiente que Sinapsis puede leer, actualizar y eventualmente archivar. No hay instincts vagos ni genericos: cada uno es concreto, accionable y medible.\n\nCada instinct tiene exactamente 6 campos obligatorios. El id es un nombre unico en formato kebab-case que identifica la regla (por ejemplo, 'usar-tailwind-siempre' o 'tests-antes-de-commit'). El trigger define la condicion que activa el instinct: cuando ocurre esta situacion, el instinct se dispara. La action describe exactamente que debe hacer Claude Code cuando el trigger se activa. La confidence es un numero entre 0.0 y 1.0 que mide la certeza del sistema sobre esa regla. El domain categoriza el instinct en un area tematica (web-development, testing, devops, etc.). Y el scope define si el instinct aplica solo al proyecto actual o de forma global a todos tus proyectos.\n\nEl sistema de confidence es el corazon de los instincts y lo que hace que Sinapsis sea inteligente en lugar de rigido. La confidence no es un valor fijo: es dinamico y cambia constantemente segun tu comportamiento. Cada vez que Sinapsis reobserva el mismo patron, la confidence sube +0.05. Si tu confirmas explicitamente que la regla es correcta, sube +0.10. Pero si haces algo que contradice la regla, baja -0.10. Y hay un decay natural de -0.02 por semana de inactividad, porque una regla que no se usa probablemente ya no es relevante. Cuando la confidence cae por debajo de 0.20, el instinct se archiva automaticamente.\n\nEste sistema de scoring dinamico significa que tus instincts estan siempre vivos. No son configuraciones estaticas que escribes una vez y olvidas: son organismos que crecen cuando los alimentas con uso consistente y se debilitan cuando dejas de usarlos. Esto evita la acumulacion de reglas obsoletas y garantiza que solo los patrones realmente activos influyan en el comportamiento de Claude Code.\n\nLos instincts son tambien la materia prima de la evolucion. Cuando varios instincts del mismo domain alcanzan confidence alta, Sinapsis los considera candidatos para fusionarse en un skill. Asi que cada instinct individual que creas no es solo una regla aislada: es una pieza de un puzzle mas grande que eventualmente se convierte en una habilidad compuesta mucho mas poderosa.",
+    "metafora": "Cada instinct es un superpoder individual. Y la confidence es tu nivel de control sobre ese poder. Cuando Peter Parker descubrio que podia lanzar telaranas, su confidence estaba en 0.3: se le escapaban en momentos inoportunos, no controlaba la direccion, le temblaban las manos. Con practica diaria, la confidence fue subiendo. A 0.5 ya podia apuntar a un edificio cercano. A 0.7 se columpiaba entre rascacielos. A 0.9 lanzaba telaranas con precision milimetrica en pleno combate. Pero si Spider-Man hubiera dejado de practicar durante meses, su control habria bajado. Exactamente igual funcionan los instincts: nacen debiles, se fortalecen con el uso y se debilitan con el abandono. Y al igual que Spider-Man combina telaranas con sentido aracnido y agilidad para crear su estilo unico de combate, tus instincts individuales se combinan para crear skills superiores.",
+    "ejemplo": "Aqui tienes un instinct real completo en formato YAML:\n\n---\nid: usar-tailwind-siempre\ntrigger: \"usuario crea componente web o pide estilos para interfaz\"\naction: \"usar Tailwind CSS con clases de utilidad para todos los estilos, nunca generar CSS vanilla ni archivos .css separados\"\nconfidence: 0.82\ndomain: web-development\nscope: project\n---\n\nVeamos como evoluciono la confidence de este instinct dia a dia:\n\n- Dia 1: Sinapsis observa que usas Tailwind. Ningun instinct creado todavia (solo 1 observacion).\n- Dia 3: Segunda observacion de Tailwind. Sinapsis toma nota pero aun no cristaliza.\n- Dia 4: Tercera observacion. Sinapsis crea el instinct con confidence 0.45.\n- Dia 6: Cuarta observacion. Confidence sube a 0.50.\n- Dia 8: Quinta observacion. Confidence sube a 0.55.\n- Dia 10: Le dices a Claude 'si, siempre Tailwind'. Confirmacion explicita: +0.10. Confidence sube a 0.65.\n- Dia 15: Reobservacion. Confidence: 0.70.\n- Dia 15: Sin actividad en la semana, decay de -0.02. Pero otra reobservacion compensa: confidence final 0.73.\n- Dia 22: Dos reobservaciones mas esta semana. Confidence: 0.82.\n\nA partir de este punto, Claude Code usa Tailwind automaticamente en cada componente web sin preguntar. Si un dia usas CSS Modules en lugar de Tailwind, la confidence bajaria -0.10 a 0.72, y Sinapsis empezaria a cuestionar si la regla sigue siendo valida.",
+    "mini_reto": "Escribe tu propio instinct en papel usando los 6 campos. Elige algo que siempre haces igual en tu trabajo y dale forma de regla atomica. Por ejemplo, si siempre escribes los nombres de variables en ingles, tu instinct seria: id: 'variables-en-ingles', trigger: 'usuario crea variable o constante', action: 'nombrar siempre en ingles usando camelCase', confidence: 0.90 (porque estas muy seguro), domain: 'coding-style', scope: 'global'. Intenta escribir al menos 2 instincts diferentes.",
+    "glosario": [
+      {
+        "termino": "Instinct",
+        "definicion": "Unidad atomica de aprendizaje en Sinapsis. Una regla unica y especifica almacenada en formato YAML que representa un patron de comportamiento aprendido. Contiene 6 campos: id, trigger, action, confidence, domain y scope."
+      },
+      {
+        "termino": "Trigger",
+        "definicion": "La condicion que activa un instinct. Define la situacion o contexto en el que la regla debe aplicarse. Ejemplo: 'usuario crea componente web' o 'se detecta error de CORS'."
+      },
+      {
+        "termino": "Action",
+        "definicion": "La accion concreta que Claude Code debe ejecutar cuando el trigger del instinct se activa. Debe ser especifica y accionable. Ejemplo: 'usar Tailwind CSS para estilos' o 'aplicar header Access-Control-Allow-Origin'."
+      },
+      {
+        "termino": "Confidence",
+        "definicion": "Puntuacion dinamica entre 0.0 y 1.0 que mide la certeza del instinct. Sube con reobservaciones (+0.05) y confirmaciones (+0.10), baja con contradicciones (-0.10) y decay temporal (-0.02/semana). Archivado automatico por debajo de 0.20."
+      },
+      {
+        "termino": "Domain",
+        "definicion": "Categoria tematica a la que pertenece un instinct. Agrupa instincts relacionados para facilitar la evolucion a skills. Ejemplos: web-development, testing, devops, coding-style, documentation."
+      },
+      {
+        "termino": "Scope",
+        "definicion": "Alcance de aplicacion de un instinct. 'project' significa que solo aplica al proyecto actual. 'global' significa que aplica a todos los proyectos del usuario. Permite tener reglas especificas por proyecto y reglas universales."
+      },
+      {
+        "termino": "YAML",
+        "definicion": "Formato de archivo de texto plano usado para almacenar los instincts. Legible por humanos y por maquinas, usa indentacion para estructura. Cada instinct se guarda como un archivo .yaml independiente dentro de la carpeta de Sinapsis."
+      }
+    ],
+    "resumen_visual": "Infografia de anatomia de un instinct, estilo diagrama de superheroe. Un cristal hexagonal en el centro representa el instinct completo. Cada una de las 6 caras del hexagono esta etiquetada con un campo: id (arriba), trigger (arriba-derecha), action (abajo-derecha), confidence (abajo), domain (abajo-izquierda), scope (arriba-izquierda). Una barra vertical al lado muestra la escala de confidence de 0.0 a 1.0 con zonas coloreadas: rojo (0.0-0.20, zona de archivo), amarillo (0.20-0.50, zona fragil), verde (0.50-0.80, zona activa), dorado brillante (0.80-1.0, zona maestra). Flechas verdes hacia arriba muestran los factores que suben confidence y flechas rojas hacia abajo muestran los que la bajan."
+  }
+}

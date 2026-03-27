@@ -1,0 +1,37 @@
+{
+  "id": "comandos-basicos",
+  "numero": 5,
+  "titulo": "El Cinturon de Batman: Comandos Basicos",
+  "zona": "laboratorio-sinaptico",
+  "tipo": "practica",
+  "xp": 35,
+  "secciones": {
+    "explicacion": "Existen 3 comandos esenciales que necesitas dominar para controlar tu sistema de instincts. Piensa en ellos como las herramientas fundamentales de tu cinturon de heroe.\n\n1) /instinct-status: Muestra todos los instincts que Claude Code ha aprendido. Para cada instinct veras: su nombre, el nivel de confidence (de 0.0 a 1.0), el dominio al que pertenece y su scope (project o global). Usalo cuando quieras saber que ha aprendido Claude Code, cuando sientas que algo no funciona como esperabas o simplemente para revisar tu progreso. Ejemplo de salida:\n\n  #  Instinct              Confidence  Domain        Scope\n  1  usar-tailwind          0.85        frontend      project\n  2  commits-en-espanol     0.92        git           global\n  3  componentes-tsx        0.78        frontend      project\n  4  tests-con-vitest       0.70        testing       project\n  5  naming-kebab-case      0.88        code-style    global\n\n2) /projects: Lista todos los proyectos que Claude Code conoce, junto con el numero de instincts asociados a cada uno. Usalo para tener una vista panoramica de todos los proyectos en los que has trabajado con Claude Code. Ejemplo de salida:\n\n  #  Project           Instincts  Last Active\n  1  mi-portfolio      8          hace 2 dias\n  2  api-tienda        12         hace 1 hora\n  3  landing-cliente   5          hace 1 semana\n\n3) /promote: Promociona un instinct de scope project a scope global. Esto significa que ese instinct se aplicara en TODOS tus proyectos, no solo en el actual. Usalo cuando descubras que un instinct es util en cualquier contexto. Ejemplo: /promote usar-tailwind. Antes, ese instinct solo funcionaba en tu proyecto actual. Despues del promote, Claude Code lo aplicara en cada proyecto que abras.",
+    "metafora": "Batman no tiene superpoderes, pero tiene el mejor cinturon de herramientas del universo. /instinct-status es tu escaner: ve todo lo que has aprendido, cada habilidad y su nivel de maestria. /projects es tu mapa de Gotham: una vista completa de todos tus territorios y cuantos recursos tienes en cada uno. /promote es tu upgrade de armadura: cuando descubres que un gadget funciona en cualquier mision, lo incorporas permanentemente a tu traje. Ya no es un arma de una sola mision, es parte de tu arsenal permanente.",
+    "ejemplo": "Imagina que llevas una semana trabajando con Claude Code en tu proyecto 'mi-portfolio'. Ejecutas /instinct-status y ves esto:\n\n  #  Instinct              Confidence  Domain        Scope\n  1  usar-tailwind          0.85        frontend      project\n  2  commits-en-espanol     0.92        git           project\n  3  componentes-tsx        0.78        frontend      project\n  4  tests-con-vitest       0.70        testing       project\n  5  naming-kebab-case      0.88        code-style    project\n\nLuego ejecutas /projects y descubres:\n\n  #  Project           Instincts  Last Active\n  1  mi-portfolio      5          ahora\n  2  api-tienda        3          hace 2 dias\n\nTe das cuenta de que 'commits-en-espanol' deberia aplicar a TODOS tus proyectos, no solo al portfolio. Asi que ejecutas:\n\n  /promote commits-en-espanol\n\n  Instinct 'commits-en-espanol' promoted to global scope.\n  It will now apply to all projects.\n\nAhora, cuando abras 'api-tienda' o cualquier proyecto nuevo, Claude Code ya sabra que debe escribir los commits en espanol.",
+    "mini_reto": "Ejecuta /instinct-status en tu proyecto actual. Identifica el instinct con mayor confidence: ese es tu superpoder mas consolidado. Ejecuta /projects para ver todos tus proyectos y cuantos instincts tiene cada uno. Si encuentras un instinct que deberia aplicar a todos tus proyectos (por ejemplo, un estilo de codigo o una convencion de commits), usa /promote para hacerlo global. Verifica el cambio ejecutando /instinct-status de nuevo y comprobando que el scope cambio a global.",
+    "glosario": [
+      {
+        "termino": "/instinct-status",
+        "definicion": "Comando que muestra todos los instincts aprendidos por Claude Code, incluyendo su confidence, dominio y scope. Es tu panel de control principal."
+      },
+      {
+        "termino": "/projects",
+        "definicion": "Comando que lista todos los proyectos conocidos por Claude Code junto con el numero de instincts asociados a cada uno."
+      },
+      {
+        "termino": "/promote",
+        "definicion": "Comando que cambia el scope de un instinct de project a global, haciendo que se aplique en todos los proyectos."
+      },
+      {
+        "termino": "Scope global",
+        "definicion": "Ambito de aplicacion que abarca todos los proyectos. Un instinct con scope global se activa sin importar en que proyecto estes trabajando."
+      },
+      {
+        "termino": "Scope project",
+        "definicion": "Ambito de aplicacion limitado a un solo proyecto. Un instinct con scope project solo se activa cuando trabajas en el proyecto donde fue creado."
+      }
+    ],
+    "resumen_visual": "CINTURON DE BATMAN - 3 HERRAMIENTAS ESENCIALES\n\n[Escaner] /instinct-status --> Ve todos tus poderes y su nivel\n[Mapa de Gotham] /projects --> Ve todos tus territorios\n[Upgrade] /promote --> Convierte un poder local en global\n\nFlujo tipico:\n1. /instinct-status --> revisar que sabes\n2. /projects --> revisar donde lo sabes\n3. /promote --> expandir lo que vale la pena\n\nRecuerda: Batman revisa su cinturon ANTES de cada mision. Tu tambien deberias revisar tus instincts regularmente."
+  }
+}
