@@ -1,0 +1,106 @@
+# Observables del Curso: Sinapsis De Cero a Maestro
+# Estos eventos permiten a Sinapsis mejorar el curso iterativamente
+
+observables:
+  # Eventos de navegacion
+  - id: leccion-abierta
+    trigger: "alumno abre una leccion"
+    datos: [leccion_id, timestamp, tiempo_en_leccion_anterior]
+    uso: "Detectar lecciones mas/menos visitadas, orden real vs sugerido"
+
+  - id: leccion-completada
+    trigger: "alumno marca leccion como completada"
+    datos: [leccion_id, timestamp, tiempo_total, intentos_reto]
+    uso: "Medir dificultad real, ajustar XP si es demasiado facil/dificil"
+
+  - id: leccion-abandonada
+    trigger: "alumno cierra leccion sin completar"
+    datos: [leccion_id, timestamp, seccion_actual, tiempo_transcurrido]
+    uso: "Detectar secciones problematicas donde los alumnos abandonan"
+
+  # Eventos de contenido
+  - id: seccion-leida
+    trigger: "alumno pasa mas de 30 segundos en una seccion"
+    datos: [leccion_id, seccion_nombre, tiempo_lectura]
+    uso: "Detectar secciones que se leen mucho (buenas) o muy poco (malas)"
+
+  - id: ejemplo-copiado
+    trigger: "alumno copia texto de la seccion ejemplo"
+    datos: [leccion_id, texto_copiado]
+    uso: "Detectar ejemplos utiles que los alumnos quieren reutilizar"
+
+  - id: glosario-consultado
+    trigger: "alumno hace click en un termino del glosario"
+    datos: [termino, leccion_id, veces_consultado]
+    uso: "Detectar terminos confusos que necesitan mejor explicacion"
+
+  # Eventos de retos
+  - id: reto-iniciado
+    trigger: "alumno empieza el mini-reto de una leccion"
+    datos: [leccion_id, timestamp]
+    uso: "Medir tasa de inicio de retos"
+
+  - id: reto-completado
+    trigger: "alumno completa el mini-reto"
+    datos: [leccion_id, timestamp, tiempo_total, sin_pistas]
+    uso: "Medir dificultad, dar XP bonus si es sin pistas"
+
+  - id: reto-fallido
+    trigger: "alumno falla el mini-reto"
+    datos: [leccion_id, timestamp, error_tipo, intentos]
+    uso: "Detectar retos demasiado dificiles, mejorar pistas"
+
+  # Eventos de gamificacion
+  - id: nivel-subido
+    trigger: "alumno sube de nivel"
+    datos: [nivel_anterior, nivel_nuevo, xp_total]
+    uso: "Verificar que la curva de XP es equilibrada"
+
+  - id: badge-desbloqueado
+    trigger: "alumno desbloquea un badge"
+    datos: [badge_id, leccion_id, timestamp]
+    uso: "Verificar que los badges motivan y no son triviales"
+
+  # Eventos de ruta
+  - id: ruta-elegida
+    trigger: "alumno elige una ruta pedagogica"
+    datos: [ruta_id, timestamp]
+    uso: "Saber que ruta prefieren los alumnos"
+
+  - id: salto-de-nodo
+    trigger: "alumno salta un nodo y va a otro no-consecutivo"
+    datos: [nodo_origen, nodo_destino, nodos_saltados]
+    uso: "Detectar nodos que los alumnos consideran innecesarios"
+
+  # Eventos de comunidad
+  - id: instinct-compartido
+    trigger: "alumno comparte un instinct en el foro"
+    datos: [instinct_id, categoria_foro]
+    uso: "Medir engagement con la comunidad"
+
+  - id: instinct-importado
+    trigger: "alumno importa un instinct del foro"
+    datos: [instinct_id, autor_original]
+    uso: "Detectar instincts mas utiles para la comunidad"
+
+# Instincts pedagogicos que se generan automaticamente
+instincts_auto:
+  - trigger: "mas del 40% de alumnos abandona una leccion"
+    action: "Crear instinct: simplificar leccion X, dividir en 2 partes"
+    confidence_inicial: 0.60
+
+  - trigger: "tiempo medio de lectura de una seccion > 2x la media"
+    action: "Crear instinct: la seccion X es demasiado larga, acortar"
+    confidence_inicial: 0.55
+
+  - trigger: "mas del 60% de alumnos falla un reto al primer intento"
+    action: "Crear instinct: el reto de leccion X necesita pistas adicionales"
+    confidence_inicial: 0.65
+
+  - trigger: "un termino del glosario se consulta mas de 20 veces"
+    action: "Crear instinct: el termino X necesita mejor explicacion en contexto"
+    confidence_inicial: 0.70
+
+  - trigger: "mas del 30% de alumnos saltan un nodo"
+    action: "Crear instinct: el nodo X puede ser opcional o necesita mejor enganche"
+    confidence_inicial: 0.50

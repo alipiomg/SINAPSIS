@@ -1,0 +1,41 @@
+{
+  "id": "evolve-superpoderes",
+  "numero": 6,
+  "titulo": "La Armadura de Iron Man: /evolve",
+  "zona": "laboratorio-sinaptico",
+  "tipo": "practica",
+  "xp": 40,
+  "secciones": {
+    "explicacion": "El comando /evolve es la herramienta mas poderosa de Sinapsis. Toma instincts individuales relacionados entre si y los fusiona en construcciones de nivel superior. Hay 3 tipos de evolucion:\n\n1) SKILL (automatico): Cuando acumulas 5 o mas instincts en el mismo dominio, /evolve los detecta y los fusiona automaticamente en un archivo de skill. Un skill es un conjunto cohesivo de reglas que trabajan juntas. En lugar de 5 instincts sueltos sobre frontend, tendras un skill llamado 'frontend-rules' que contiene todas las reglas organizadas y priorizadas. Los skills se aplican automaticamente: Claude Code los lee al inicio de cada sesion.\n\n2) COMMAND (manual): Puedes crear un slash command personalizado que ejecuta un flujo de trabajo especifico. Por ejemplo, /crear-componente podria generar un archivo TSX con tu estructura preferida, anadir tests, y actualizar el index de exports. Defines el comando con /evolve --type command y describes lo que debe hacer.\n\n3) AGENT (multi-paso): El nivel mas avanzado. Un agent es un flujo autonomo que maneja tareas complejas de multiples pasos. Por ejemplo, un agent de 'code-review' que analiza los cambios, revisa el estilo, ejecuta tests, y genera un resumen. Se crea con /evolve --type agent.\n\nLa evolucion de tipo SKILL es la mas comun y ocurre de forma natural conforme trabajas. Las de tipo COMMAND y AGENT son mas avanzadas y las creas tu manualmente cuando necesitas automatizar flujos repetitivos.",
+    "metafora": "Cuando Tony Stark tiene suficientes piezas de tecnologia, las fusiona en una armadura completa. /evolve hace exactamente lo mismo: toma 5 instincts sueltos y los fusiona en un traje completo. Imagina que tienes un repulsor suelto, unas botas con propulsion, un casco con HUD, un reactor arc, y un sistema de comunicacion. Por separado son gadgets utiles. Pero cuando los fusionas, obtienes la armadura de Iron Man. El Mark I era basico, apenas volaba. El Mark 50 es nanotecnologia pura. Tus skills tambien evolucionan: cada vez que /evolve detecta nuevos instincts en el mismo dominio, actualiza el skill existente haciendolo mas completo y preciso.",
+    "ejemplo": "Imagina que has estado trabajando en marketing de contenido y tienes estos 5 instincts:\n\n  ANTES (5 instincts sueltos):\n  1. tono-casual        (confidence: 0.85) - Usar tono informal y cercano\n  2. formato-listas     (confidence: 0.80) - Preferir listas sobre parrafos largos\n  3. plataforma-twitter (confidence: 0.75) - Adaptar contenido a 280 caracteres\n  4. hashtags-max-5     (confidence: 0.90) - No usar mas de 5 hashtags\n  5. cta-directo        (confidence: 0.82) - Call-to-action claro y directo\n\nEjecutas /evolve y Sinapsis detecta que los 5 pertenecen al dominio 'content':\n\n  /evolve\n  Detected cluster: 5 instincts in domain 'content'\n  Creating skill: content-rules\n  Merging instincts into cohesive rule set...\n  Skill 'content-rules' created successfully.\n\n  DESPUES (1 skill cohesivo):\n  Skill: content-rules\n  Domain: content\n  Rules:\n    - Usar tono informal y cercano en todo el contenido\n    - Estructurar con listas, evitar parrafos de mas de 3 lineas\n    - Para Twitter: maximo 280 chars, 5 hashtags, CTA directo\n    - Call-to-action siempre visible y con verbo de accion\n  Source instincts: 5 (merged)\n\nAhora, en lugar de que Claude Code consulte 5 instincts por separado, tiene 1 skill integrado con todas las reglas coherentes entre si.",
+    "mini_reto": "Revisa tus instincts con /instinct-status. Agrupa mentalmente los que pertenecen al mismo dominio (frontend, backend, testing, estilo de codigo, contenido, etc.). Cuenta cuantos tienes en cada dominio. Si tienes 5 o mas en un mismo dominio, ejecuta /evolve y observa que skill genera. Luego vuelve a ejecutar /instinct-status para ver como los instincts individuales han sido absorbidos por el nuevo skill. Si no llegas a 5 en ningun dominio, sigue trabajando y deja que los instincts se acumulen naturalmente.",
+    "glosario": [
+      {
+        "termino": "/evolve",
+        "definicion": "Comando que fusiona instincts relacionados en construcciones de nivel superior: skills, commands o agents. Es el mecanismo de evolucion central de Sinapsis."
+      },
+      {
+        "termino": "Skill",
+        "definicion": "Conjunto cohesivo de reglas creado automaticamente cuando 5 o mas instincts del mismo dominio se fusionan. Se aplica automaticamente en cada sesion."
+      },
+      {
+        "termino": "Command",
+        "definicion": "Slash command personalizado que ejecuta un flujo de trabajo especifico. Se crea manualmente con /evolve --type command."
+      },
+      {
+        "termino": "Agent",
+        "definicion": "Flujo autonomo de multiples pasos que maneja tareas complejas. El nivel mas avanzado de evolucion. Se crea con /evolve --type agent."
+      },
+      {
+        "termino": "Cluster",
+        "definicion": "Grupo de instincts relacionados que pertenecen al mismo dominio y son candidatos a fusionarse en un skill."
+      },
+      {
+        "termino": "Dominio",
+        "definicion": "Categoria tematica a la que pertenece un instinct (frontend, backend, testing, contenido, etc.). Sinapsis agrupa automaticamente los instincts por dominio."
+      }
+    ],
+    "resumen_visual": "ARMADURA DE IRON MAN - EVOLUCION EN 3 NIVELES\n\n[Nivel 1] SKILL (automatico)\n  5+ instincts del mismo dominio --> 1 skill cohesivo\n  Piezas sueltas --> Armadura completa\n\n[Nivel 2] COMMAND (manual)\n  Tu defines un flujo de trabajo --> 1 slash command\n  Como un ataque especial programado\n\n[Nivel 3] AGENT (multi-paso)\n  Flujo autonomo complejo --> 1 agente inteligente\n  Tu propio J.A.R.V.I.S.\n\nFlujo natural:\n  Instincts sueltos --> Cluster detectado --> /evolve --> Skill creado\n\nRecuerda: Mark I era basico. Mark 50 es nanotecnologia. Tus skills tambien evolucionan con cada iteracion."
+  }
+}

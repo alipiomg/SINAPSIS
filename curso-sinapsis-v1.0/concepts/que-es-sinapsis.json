@@ -1,0 +1,33 @@
+{
+  "id": "que-es-sinapsis",
+  "numero": 1,
+  "titulo": "El Origen del Superheroe",
+  "zona": "plaza-sinapsis",
+  "tipo": "teoria",
+  "xp": 25,
+  "secciones": {
+    "explicacion": "Sinapsis es un sistema de aprendizaje continuo disenado para Claude Code. Su proposito es simple pero revolucionario: que tu asistente de IA deje de olvidar todo cada vez que cierras una sesion. Piensa en esto: cada vez que abres Claude Code, arranca desde cero. No recuerda que ayer le pediste usar Tailwind, no sabe que prefieres componentes funcionales en React, no tiene idea de que tu proyecto usa una estructura de carpetas especifica. Es como trabajar con un becario nuevo cada manana. Sinapsis resuelve exactamente ese problema.\n\nEl sistema funciona observando silenciosamente como trabajas. Detecta los patrones que repites una y otra vez: las tecnologias que eliges, las convenciones que sigues, los errores que corriges de la misma forma. Cuando un patron se repite lo suficiente, Sinapsis lo cristaliza en lo que llamamos un instinct, una regla atomica con un nivel de confianza asociado. Estos instincts se almacenan en archivos YAML que persisten entre sesiones, dandole a Claude Code una memoria real y funcional.\n\nPero Sinapsis no se queda ahi. Cuando acumulas suficientes instincts relacionados entre si, el sistema los evoluciona a estructuras mas poderosas: skills (habilidades compuestas), commands (comandos automatizados) e incluso agents (agentes autonomos especializados). Es un sistema que crece contigo, se adapta a tu forma de trabajar y se vuelve mas util con cada sesion.\n\nLa diferencia entre trabajar sin Sinapsis y con Sinapsis es abismal. Sin Sinapsis, cada sesion es un deja vu eterno: le explicas lo mismo una y otra vez, corriges los mismos errores, repites las mismas instrucciones. Con Sinapsis, Claude Code recuerda tus preferencias, anticipa tus necesidades y ejecuta siguiendo tus patrones establecidos. Es la diferencia entre tener un asistente con amnesia y tener un companero que te conoce de verdad.\n\nEn terminos practicos, Sinapsis transforma a Claude Code de una herramienta generica a un asistente personalizado que evoluciona. No es un simple archivo de configuracion estatico: es un organismo vivo de reglas que nacen, crecen, se fortalecen o se debilitan segun tu uso real. Cada sesion alimenta al sistema, y cada sesion se beneficia de todo lo aprendido anteriormente.",
+    "metafora": "Como el suero del Capitan America: transforma a Claude Code de soldado raso a supersoldado. Sin el suero, Steve Rogers era un tipo normal con buenas intenciones pero capacidades limitadas. No podia correr mas rapido, no podia pelear mejor, no podia recordar estrategias complejas en medio del combate. Con el suero, se convirtio en el Capitan America: mas fuerte, mas rapido, mas inteligente tacticamiente. Sinapsis es ese suero para Claude Code. Sin el, tienes una IA generica que hace lo que le pides pero olvida todo al cerrar la sesion. Con el, tienes un supersoldado digital que aprende de cada batalla, recuerda cada estrategia y mejora con cada mision.",
+    "ejemplo": "Imagina este escenario real: estas desarrollando una aplicacion web y cada vez que creas un componente le dices a Claude Code que use Tailwind CSS para los estilos. Sesion 1: 'Usa Tailwind para los estilos'. Sesion 2: 'Recuerda, Tailwind, no CSS vanilla'. Sesion 3: 'Otra vez, Tailwind por favor'. Sin Sinapsis, en la sesion 11 seguiras repitiendo lo mismo.\n\nCon Sinapsis, esto es lo que ocurre: en la sesion 3, el sistema detecta que has mencionado Tailwind tres veces consecutivas. Crea automaticamente un instinct llamado 'usar-tailwind-siempre' con una confidence inicial de 0.65. En la sesion 4, lo vuelves a confirmar y la confidence sube a 0.75. Para la sesion 5, la confidence esta en 0.85 y Claude Code ya no te pregunta: simplemente usa Tailwind cada vez que crea un componente web. Si en algun momento cambias de opinion y empiezas a usar CSS Modules, la confidence del instinct de Tailwind empezara a bajar automaticamente mientras se crea uno nuevo para CSS Modules.",
+    "mini_reto": "Piensa en 3 cosas que le repites constantemente a tu asistente de IA. Pueden ser preferencias de tecnologia ('usa TypeScript', 'prefiero funciones arrow'), convenciones de estilo ('nombres de variables en ingles', 'comentarios en espanol') o patrones de trabajo ('siempre crea tests', 'usa ESLint antes de commitear'). Escribelas en un papel. Esos serian tus primeros instincts, las primeras reglas que Sinapsis cristalizaria automaticamente si estuviera observandote.",
+    "glosario": [
+      {
+        "termino": "Sinapsis",
+        "definicion": "Sistema de aprendizaje continuo para Claude Code que observa patrones de uso, los cristaliza como instincts y los evoluciona en habilidades mas complejas. Permite que Claude Code mantenga memoria y mejore entre sesiones."
+      },
+      {
+        "termino": "Instinct",
+        "definicion": "La unidad atomica de aprendizaje en Sinapsis. Es una regla especifica almacenada en formato YAML que contiene un trigger (cuando se activa), una action (que hace) y un nivel de confidence (que tan seguro esta el sistema de que es correcto)."
+      },
+      {
+        "termino": "Claude Code",
+        "definicion": "La interfaz de linea de comandos oficial de Anthropic para trabajar con Claude. Permite interactuar con Claude directamente desde tu terminal para escribir codigo, editar archivos, ejecutar comandos y gestionar proyectos de desarrollo."
+      },
+      {
+        "termino": "Sesion",
+        "definicion": "Cada interaccion individual con Claude Code desde que lo abres hasta que lo cierras. Sin Sinapsis, cada sesion es independiente y sin memoria. Con Sinapsis, las sesiones se conectan a traves de los instincts aprendidos."
+      }
+    ],
+    "resumen_visual": "Infografia dividida en dos columnas comparativas. Columna izquierda titulada 'Sin Sinapsis': un soldado debil y olvidadizo que empieza de cero cada dia, con flechas ciclicas mostrando repeticion eterna. Columna derecha titulada 'Con Sinapsis': un supersoldado con escudo, rodeado de instincts brillantes que lo potencian, con una flecha ascendente mostrando mejora continua. En el centro, un frasco con el suero del Capitan America etiquetado como 'Sinapsis' conectando ambas columnas."
+  }
+}

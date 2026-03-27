@@ -1,0 +1,33 @@
+{
+  "id": "gotchas-errores",
+  "numero": 7,
+  "titulo": "Spider-Sense: Detecta Peligros con /gotcha",
+  "zona": "laboratorio-sinaptico",
+  "tipo": "practica",
+  "xp": 35,
+  "secciones": {
+    "explicacion": "El comando /gotcha captura pares de error-solucion como instincts de alta prioridad. Funciona asi: cuando encuentras un error y descubres como arreglarlo, ejecutas /gotcha con dos argumentos: la descripcion del error y la solucion que aplicaste. Sinapsis crea inmediatamente un instinct con confidence 0.90 (alta, porque es una solucion confirmada que ya funciono).\n\nEl formato es simple:\n  /gotcha \"descripcion del error\" \"solucion aplicada\"\n\nPor que confidence 0.90 desde el inicio? Porque no es una preferencia subjetiva ni un patron que necesita validacion. Es un hecho comprobado: este error se resuelve con esta solucion. No hay ambiguedad.\n\nCuando usarlo:\n- Acabas de resolver un error que te costo tiempo encontrar\n- Un companero te comparte un fix que funciona\n- Lees la solucion a un bug conocido en la documentacion\n- Quieres asegurarte de que un error nunca se repita\n\nEl poder real de /gotcha se manifiesta con el tiempo. Cada gotcha que capturas es un peligro menos en tu camino. Despues de capturar 20 o 30 gotchas, Claude Code empieza a esquivar errores automaticamente, avisandote antes de que ocurran. Es como desarrollar un sexto sentido para los bugs.",
+    "metafora": "El spider-sense de Spider-Man le avisa del peligro antes de que ocurra. No necesita ver la amenaza: su cuerpo reacciona automaticamente. /gotcha entrena ese mismo sentido en Claude Code. Cada error que capturas es un peligro que nunca volvera a sorprenderte. La primera vez que te ataca el Duende Verde, te pilla desprevenido. La segunda vez, tu spider-sense se activa y esquivas el ataque sin pensar. Con suficientes gotchas, Claude Code esquiva errores automaticamente, como si tuviera un radar de peligros integrado.",
+    "ejemplo": "Aqui tienes 3 gotchas reales que puedes usar ahora mismo:\n\n1. Error CORS en llamadas fetch:\n   /gotcha \"CORS error en fetch API\" \"Anadir header Access-Control-Allow-Origin en el servidor\"\n   --> Crea instinct: cors-fetch-fix (confidence: 0.90, domain: backend)\n\n2. Error de dependencias en npm:\n   /gotcha \"npm install falla con ERESOLVE\" \"Usar --legacy-peer-deps\"\n   --> Crea instinct: npm-eresolve-fix (confidence: 0.90, domain: tooling)\n\n3. Estilos de Tailwind que no se aplican:\n   /gotcha \"Tailwind classes no aplican\" \"Verificar que el fichero esta en content de tailwind.config.js\"\n   --> Crea instinct: tailwind-content-fix (confidence: 0.90, domain: frontend)\n\nDespues de crear estos 3 gotchas, si ejecutas /instinct-status veras:\n\n  #  Instinct              Confidence  Domain      Scope    Type\n  1  cors-fetch-fix         0.90       backend     project  gotcha\n  2  npm-eresolve-fix       0.90       tooling     project  gotcha\n  3  tailwind-content-fix   0.90       frontend    project  gotcha\n\nLa proxima vez que intentes hacer un fetch y haya riesgo de CORS, Claude Code te avisara ANTES de que el error ocurra.",
+    "mini_reto": "Piensa en los 3 errores mas frecuentes que encuentras en tu trabajo diario. Para cada uno, escribe mentalmente el error exacto y la solucion que aplicaste. Ahora ejecuta /gotcha para cada par:\n\n  /gotcha \"tu primer error frecuente\" \"la solucion que siempre aplicas\"\n  /gotcha \"tu segundo error frecuente\" \"su solucion correspondiente\"\n  /gotcha \"tu tercer error frecuente\" \"como lo resuelves\"\n\nVerifica con /instinct-status que se han creado los 3 instincts de tipo gotcha con confidence 0.90. Ya tienes tu spider-sense basico activado.",
+    "glosario": [
+      {
+        "termino": "/gotcha",
+        "definicion": "Comando que captura un par error-solucion como instinct de alta prioridad. Formato: /gotcha \"error\" \"solucion\". Crea un instinct con confidence 0.90."
+      },
+      {
+        "termino": "Gotcha",
+        "definicion": "Un instinct especial que almacena un par error-solucion. Tiene alta prioridad porque representa conocimiento verificado y comprobado."
+      },
+      {
+        "termino": "Error-fix pair",
+        "definicion": "Par compuesto por la descripcion de un error y la solucion confirmada que lo resuelve. Es la unidad basica que /gotcha almacena."
+      },
+      {
+        "termino": "Alta prioridad",
+        "definicion": "Nivel de prioridad asignado a los gotchas (confidence 0.90). Indica que Claude Code debe aplicar esta regla con alta certeza porque la solucion ha sido verificada."
+      }
+    ],
+    "resumen_visual": "SPIDER-SENSE - SISTEMA DE DETECCION DE PELIGROS\n\n[Captura] /gotcha \"error\" \"solucion\" --> Instinct de alta prioridad (0.90)\n\n[Ciclo de proteccion]\n  1. Encuentras un error\n  2. Descubres la solucion\n  3. Ejecutas /gotcha\n  4. Nunca mas te sorprende ese error\n\n[3 Gotchas esenciales para empezar]\n  CORS error     --> Access-Control-Allow-Origin\n  npm ERESOLVE   --> --legacy-peer-deps\n  Tailwind vacio --> Revisar content en config\n\nRecuerda: Spider-Man no nacio con spider-sense. Lo desarrollo despues de ser picado. Tu tambien desarrollas tu sexto sentido para bugs con cada /gotcha que capturas."
+  }
+}

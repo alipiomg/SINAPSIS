@@ -1,0 +1,37 @@
+{
+  "id": "pipeline-4-fases",
+  "numero": 2,
+  "titulo": "La Escuela Xavier: 4 Fases de Entrenamiento",
+  "zona": "plaza-sinapsis",
+  "tipo": "teoria",
+  "xp": 30,
+  "secciones": {
+    "explicacion": "El pipeline de Sinapsis funciona en 4 fases secuenciales, cada una construyendo sobre la anterior. No puedes saltar fases ni acelerar el proceso artificialmente: es un sistema organico que necesita su tiempo para madurar. Entender estas 4 fases te dara claridad sobre por que Sinapsis no aprende todo el primer dia, y por que eso es exactamente lo correcto.\n\nFase 1: OBSERVACION. Sinapsis observa silenciosamente todo lo que haces en cada sesion con Claude Code. Registra los archivos que editas, los comandos que ejecutas, las tecnologias que mencionas, las correcciones que aplicas y los patrones que sigues. No interviene, no sugiere, no modifica nada. Solo observa y registra. Es la fase mas pasiva pero tambien la mas fundamental: sin datos de observacion, no hay aprendizaje posible.\n\nFase 2: DETECCION. Una vez que Sinapsis ha acumulado suficientes observaciones, empieza a detectar patrones recurrentes. Si usas el mismo framework tres veces seguidas, lo detecta. Si corriges el mismo tipo de error de la misma forma, lo detecta. Si estructuras tus carpetas siempre igual, lo detecta. La deteccion no es inmediata: necesita repeticion para distinguir entre algo que hiciste una vez por casualidad y algo que realmente forma parte de tu flujo de trabajo.\n\nFase 3: INSTINCTS. Cuando un patron detectado alcanza suficiente recurrencia, Sinapsis lo cristaliza en un instinct: una regla atomica en formato YAML con un nivel de confidence asociado. El instinct nace con una confidence baja (tipicamente entre 0.40 y 0.60) y va subiendo cada vez que el patron se reconfirma. Si el patron deja de aparecer o es contradecido, la confidence baja. Los instincts son la memoria viva de Sinapsis.\n\nFase 4: EVOLUCION. Esta es la fase mas poderosa. Cuando varios instincts relacionados entre si alcanzan niveles altos de confidence, Sinapsis los agrupa y los evoluciona a estructuras superiores. Un grupo de 5 instincts sobre desarrollo web puede convertirse en un skill llamado 'web-dev-rules'. Un conjunto de instincts sobre testing puede evolucionar en un command '/run-tests' automatizado. Y un cluster complejo de skills puede dar lugar a un agent especializado. La evolucion es la recompensa por la consistencia.",
+    "metafora": "Como el entrenamiento en la Escuela Xavier de los X-Men. Cuando un nuevo mutante llega a la mansion, no lo ponen a combatir villanos el primer dia. Primero lo observan (Fase 1): el Profesor X y su equipo estudian como se comporta, que habilidades muestra, que patrones emergen en situaciones de estres. Luego detectan su mutacion especifica (Fase 2): no es lo mismo controlar el hielo que leer mentes, y cada mutacion requiere un enfoque distinto. Despues la entrenan hasta que la controla (Fase 3 - instincts): Iceman no empezo congelando oceanos, empezo haciendo cubitos de hielo, y fue subiendo su nivel de control poco a poco. Y finalmente evolucionan a un nuevo nivel de poder (Fase 4): cuando dominas lo basico, tus poderes individuales se combinan en habilidades superiores que ni sabias que tenias.",
+    "ejemplo": "Veamos un flujo real completo a lo largo de un mes:\n\nDia 1 (Observacion): Estas trabajando en una API y te encuentras un error de CORS. Lo buscas, encuentras la solucion y la aplicas manualmente. Sinapsis registra: 'usuario corrigio error CORS anadiendo headers Access-Control-Allow-Origin'.\n\nDia 3 (Observacion): Otro proyecto, mismo error de CORS. Aplicas la misma solucion. Sinapsis registra la segunda ocurrencia.\n\nDia 5 (Deteccion): Sinapsis analiza sus registros y detecta un patron: 'error CORS corregido de la misma forma 2 veces en 5 dias'.\n\nDia 7 (Instincts): El sistema cristaliza el patron en un instinct llamado 'cors-fix' con confidence 0.55. La proxima vez que detecte un error CORS, sugerira la solucion automaticamente.\n\nDia 14 (Instincts madurando): Has confirmado la solucion 2 veces mas. La confidence sube a 0.85. El instinct es solido y Claude Code aplica la correccion sin preguntar.\n\nDia 30 (Evolucion): Tienes 5 instincts relacionados con desarrollo web: 'cors-fix' (0.85), 'usar-tailwind' (0.90), 'estructura-carpetas-src' (0.78), 'typescript-strict' (0.82), 'eslint-antes-commit' (0.75). Sinapsis los agrupa y evoluciona en un skill compuesto llamado 'web-dev-rules' que aplica todas estas reglas de forma coordinada.",
+    "mini_reto": "Dibuja las 4 fases en un papel con flechas conectandolas en secuencia: Observacion -> Deteccion -> Instincts -> Evolucion. Para cada fase, escribe un ejemplo concreto de tu trabajo diario que encajaria ahi. Por ejemplo: Observacion = 'siempre creo un archivo .env antes de empezar', Deteccion = 'lo he hecho en los ultimos 4 proyectos', Instincts = regla 'crear-env-al-inicio', Evolucion = esta regla se combina con otras de setup inicial para formar un skill 'project-bootstrap'.",
+    "glosario": [
+      {
+        "termino": "Pipeline",
+        "definicion": "Secuencia ordenada de fases por las que pasa la informacion en Sinapsis. Cada fase procesa los datos y los pasa a la siguiente. El pipeline completo va de la observacion bruta hasta la evolucion en estructuras complejas."
+      },
+      {
+        "termino": "Observacion",
+        "definicion": "Primera fase del pipeline. Sinapsis registra silenciosamente todas las acciones del usuario durante las sesiones de Claude Code: archivos editados, comandos ejecutados, tecnologias mencionadas y patrones de trabajo."
+      },
+      {
+        "termino": "Deteccion",
+        "definicion": "Segunda fase del pipeline. El sistema analiza los registros de observacion y busca patrones recurrentes: acciones que se repiten, tecnologias que se eligen consistentemente, soluciones que se aplican de la misma forma."
+      },
+      {
+        "termino": "Evolucion",
+        "definicion": "Cuarta y ultima fase del pipeline. Cuando varios instincts relacionados alcanzan confidence alta, Sinapsis los agrupa y los transforma en estructuras superiores: skills (habilidades compuestas), commands (comandos automatizados) o agents (agentes autonomos)."
+      },
+      {
+        "termino": "Confidence",
+        "definicion": "Valor numerico entre 0.0 y 1.0 que indica el nivel de certeza de un instinct. Sube cuando el patron se reconfirma (+0.05 por reobservacion, +0.10 por confirmacion del usuario), baja cuando se contradice (-0.10) o por inactividad (-0.02 por semana). Por debajo de 0.20 el instinct se archiva."
+      }
+    ],
+    "resumen_visual": "Infografia horizontal con 4 bloques conectados por flechas gruesas. Bloque 1 (Observacion): un ojo gigante con la silueta del Profesor X observando pantallas de codigo. Bloque 2 (Deteccion): una lupa con patrones resaltados en color, mostrando repeticiones identificadas. Bloque 3 (Instincts): cristales brillantes con etiquetas YAML, cada uno con una barra de confidence. Bloque 4 (Evolucion): los cristales se fusionan en una estrella mas grande etiquetada como 'Skill', con rayos de energia irradiando. Debajo, una linea temporal mostrando 'Dia 1' hasta 'Dia 30' para dar contexto de tiempo real."
+  }
+}

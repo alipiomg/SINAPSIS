@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-copper: #C4956A;
+  --color-copper-light: #E8B88A;
+  --color-copper-dark: #A07850;
+  --color-abyss: #050505;
+  --color-surface: #0A0A0A;
+  --color-surface-2: #141414;
+  --color-surface-3: #1E1E1E;
+  --color-gold: #FFD700;
+}
+
+body {
+  margin: 0;
+  background: #050505;
+  color: #FAFAFA;
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+pre, code {
+  font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #C4956A44; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #C4956A88; }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

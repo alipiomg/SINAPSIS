@@ -1,0 +1,117 @@
+{
+  "curso_id": "sinapsis-v1",
+  "niveles": [
+    {
+      "id": "civil",
+      "nombre": "Civil",
+      "xp_minimo": 0,
+      "descripcion": "Acabas de llegar. Sin poderes... todavia.",
+      "icono": "🧑",
+      "color": "#888888"
+    },
+    {
+      "id": "mutante-despierto",
+      "nombre": "Mutante Despierto",
+      "xp_minimo": 50,
+      "descripcion": "Tu primer superpoder ha despertado. Ya no eres un civil cualquiera.",
+      "icono": "⚡",
+      "color": "#C4956A"
+    },
+    {
+      "id": "heroe-entrenamiento",
+      "nombre": "Heroe en Entrenamiento",
+      "xp_minimo": 150,
+      "descripcion": "Dominas tus habilidades basicas. La Escuela Xavier estaria orgullosa.",
+      "icono": "🦸",
+      "color": "#E8B88A"
+    },
+    {
+      "id": "superheroe",
+      "nombre": "Superheroe",
+      "xp_minimo": 300,
+      "descripcion": "Tienes tu propio traje. Skills evolucionadas, commands personalizados.",
+      "icono": "🦸‍♂️",
+      "color": "#FFD700"
+    },
+    {
+      "id": "vengador",
+      "nombre": "Vengador",
+      "xp_minimo": 500,
+      "descripcion": "Tu equipo de agents trabaja para ti. Eres parte de los Vengadores.",
+      "icono": "🛡️",
+      "color": "#FF4500"
+    }
+  ],
+  "badges": [
+    {
+      "id": "origen",
+      "nombre": "Origen",
+      "descripcion": "Todo superheroe tiene un origen. Completaste tu primera leccion.",
+      "condicion": "Completar nodo que-es-sinapsis",
+      "icono": "🌟",
+      "xp_bonus": 5
+    },
+    {
+      "id": "primer-poder",
+      "nombre": "Primer Poder",
+      "descripcion": "Has creado tu primer instinct. Tu primer superpoder ha despertado.",
+      "condicion": "Completar nodo primer-contacto",
+      "icono": "⚡",
+      "xp_bonus": 10
+    },
+    {
+      "id": "entrenamiento-xavier",
+      "nombre": "Entrenamiento Xavier",
+      "descripcion": "Completaste toda la Plaza de la Sinapsis. Como graduarte de la Escuela Xavier.",
+      "condicion": "Completar todos los nodos de zona plaza-sinapsis",
+      "icono": "🎓",
+      "xp_bonus": 15
+    },
+    {
+      "id": "laboratorio-stark",
+      "nombre": "Laboratorio Stark",
+      "descripcion": "Dominas todas las herramientas. Tony Stark estaria impresionado.",
+      "condicion": "Completar todos los nodos de zona laboratorio-sinaptico",
+      "icono": "🔧",
+      "xp_bonus": 15
+    },
+    {
+      "id": "mision-completada",
+      "nombre": "Mision Completada",
+      "descripcion": "Tu primera mision real superada. Ya eres un heroe de verdad.",
+      "condicion": "Completar 1 nodo de zona taller-casos-uso",
+      "icono": "🎯",
+      "xp_bonus": 10
+    },
+    {
+      "id": "avenger",
+      "nombre": "Avenger",
+      "descripcion": "Los 4 casos de uso completados. Eres un Vengador completo.",
+      "condicion": "Completar los 4 nodos de zona taller-casos-uso",
+      "icono": "🛡️",
+      "xp_bonus": 20
+    },
+    {
+      "id": "forker",
+      "nombre": "Forker",
+      "descripcion": "Compartiste tus poderes con otros heroes. La Liga crece.",
+      "condicion": "Compartir instincts o skills en el foro",
+      "icono": "🤝",
+      "xp_bonus": 10
+    },
+    {
+      "id": "spider-sense",
+      "nombre": "Spider-Sense",
+      "descripcion": "Un gran poder conlleva una gran responsabilidad. Reto final completado.",
+      "condicion": "Completar nodo tu-propio-sinapsis (reto final)",
+      "icono": "🕷️",
+      "xp_bonus": 25
+    }
+  ],
+  "xp_total_curso": 535,
+  "reglas_xp": {
+    "completar_leccion": "XP del nodo segun course.json",
+    "badge_bonus": "XP extra al desbloquear badge",
+    "reto_bonus": "x1.5 si se completa el reto sin pistas"
+  }
+}
